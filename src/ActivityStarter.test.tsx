@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { render, fireEvent, screen } from '@testing-library/react';
 import ActivityStarter from './ActivityStarter'; // Adjust the import to your file structure
 
@@ -28,6 +28,6 @@ describe('Viewing and Starting Selected Activity', () => {
         fireEvent.click(startButton);
         // After clicking, the button might change state, disable or trigger a new view
         // Add assertions based on how your application should respond, e.g.,
-        // expect(startButton).toBeDisabled(); if the button should disable after clicking
+        expect(startButton).toBeDisabled(); //if the button should disable after clicking
     });
 });

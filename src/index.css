@@ -123,3 +123,53 @@ button {
   margin: 0 auto;
   /* Add more styles or classes for specific icons */
 }
+
+
+
+/* Hiding the default radio button */
+[type='radio'] {
+  display: none;
+}
+
+/* Styling the label that will represent the radio button */
+label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00B4AB; /* The border color you want */
+  border-radius: 15px; /* Rounded corners */
+  position: relative;
+  cursor: pointer;
+  margin-right: 5px; /* Spacing between buttons */
+  background-color: #fff; /* Default background */
+  transition: background-color 0.3s ease;
+  user-select: none; /* Prevent text selection */
+}
+
+/* Styling the label when the radio button is checked */
+[type='radio']:checked + label {
+  background-color: #00B4AB; /* Background color when active/selected */
+  color: white;
+}
+
+/* Optional: Styling when the label is hovered */
+label:hover {
+  background-color: #b2dfdb; /* Lighter shade for hover state */
+}
+
+/* Optional: Icon or text inside the label */
+label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0; /* Hide initially */
+  transition: opacity 0.3s ease;
+}
+
+/* Showing the icon or text when the radio button is checked */
+[type='radio']:checked + label::after {
+  content: '✓'; /* You can replace this with an SVG icon or any symbol you prefer */
+  opacity: 1; /* Show when active */
+}

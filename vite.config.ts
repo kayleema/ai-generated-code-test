@@ -11,4 +11,5 @@ export default defineConfig({
     setupFiles: "./src/setup.ts",
     // exclude: [...configDefaults.exclude, "./src/env.test.ts"],
   },
+  base: "/ai-generated-code-test/"
 })
